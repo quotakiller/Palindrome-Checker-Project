@@ -1,0 +1,84 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Palindrome Checker Project</h1>
+<input id="text-input">
+<button id="check-btn">Button</button>
+<div id="result"></div>
+    
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+** end of undefined **
+
+** start of undefined **
+
+body {
+    
+    text-align: center;
+    margin: 50px;
+    background-color: black;
+    color: white;
+    font-family: fantasy;
+    
+     
+}
+
+#text-input {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#check-btn {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 50px;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+}
+
+
+** end of undefined **
+
+** start of undefined **
+
+const checkButton = document.getElementById('check-btn');
+const textInput = document.getElementById('text-input');
+const resultDiv = document.getElementById('result');
+
+checkButton.addEventListener('click', function() {
+  if (textInput.value === '') {
+    alert('Please input a value');
+  } else {
+    const inputText = textInput.value.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove non-alphanumeric characters
+    const reversedText = inputText.split('').reverse().join('');
+
+    resultDiv.innerText = inputText === reversedText
+      ? `${textInput.value} is a palindrome.`
+      : `${textInput.value} is not a palindrome.`;
+  }
+});
+
+
+
+
+
+
+
+** end of undefined **
+
